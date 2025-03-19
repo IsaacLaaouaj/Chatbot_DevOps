@@ -22,7 +22,7 @@ def get_relevant_context(query: str) -> str:
         if mem0_client:
             response = mem0_client.search(
                 query, 
-                user_id="user",
+                user_id="lucia",
                 rerank=True,
                 filter_memories=True,
                 limit=5
@@ -126,7 +126,7 @@ def main(page: ft.Page):
             {"role": "user", "content": user_input.value},
             {"role": "assistant", "content": ai_message}
         ]
-        mem0_client.add(messages, user_id="user")
+        mem0_client.add(messages, user_id="lucia")
 
 
         user_input.value = ""
