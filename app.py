@@ -9,8 +9,7 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 mem0_client = MemoryClient(api_key="m0-e6ULRDch78DmYrlBXGYGD2dN5I8jfTwDaQXR74cK")
 try:
-    memory = load('memoriememories/fletoMemory.joblib')
-    print(memory)
+    memory = load('memories/fletoMemory.joblib')
 except:
     memory = ConversationBufferMemory()
 
